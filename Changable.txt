@@ -1,0 +1,21 @@
+# 可编辑内容说明
+
+以下是个人网页中可编辑的内容及其在文件中的位置：
+
+1. 姓名
+   - 文件：index.html
+   - 位置：第115行
+   - 代码：<h1 class="name">张三</h1>
+   - 说明：将"张三"替换为您的真实姓名
+
+2. 头像
+   - 文件：index.html
+   - 位置：第112行
+   - 代码：<img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=professional%20profile%20photo%20of%20a%20person&image_size=square" alt="头像" class="avatar">
+   - 说明：将src属性的值替换为您的头像图片URL
+
+3. 邮箱
+   - 文件：index.html
+   - 位置：第118行
+   - 代码：<p class="email">zhangsan@example.com</p>
+   - 说明：将"zhangsan@example.com"替换为您的真实邮箱地址

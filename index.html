@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* 墨冰配色背景 */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(180deg, 
+                #ffffff 0%, 
+                #e0f7fa 25%, 
+                #1976d2 75%, 
+                #0a0a0a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        /* 导航栏 - 为以后添加其他页面预留 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #0d47a1;
+        }
+        
+        /* 个人信息卡片 */
+        .profile-card {
+            background-color: rgba(197, 225, 255, 0.9);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 4rem;
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+        
+        /* 头像样式 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #1976d2;
+        }
+        
+        /* 姓名样式 */
+        .name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #0d47a1;
+        }
+        
+        /* 邮箱样式 */
+        .email {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        /* 编辑提示 */
+        .edit-tip {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+        
+        /* 右侧三栏布局 */
+        .right-content {
+            position: absolute;
+            right: 5%;
+            top: 15%;
+            bottom: 15%;
+            transform: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 30%;
+            max-width: 400px;
+        }
+        
+        /* 单栏样式 */
+        .column {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            flex: 1;
+            min-width: 0;
+            min-height: 150px;
+        }
+        
+        /* 栏标题样式 */
+        .column-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0d47a1;
+            margin-bottom: 1rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1976d2;
+        }
+        
+        /* 栏内容样式 */
+        .column-content {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 - 为以后添加其他页面预留 -->
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="#">关于</a> <!-- 预留链接 -->
+        <a href="#">项目</a> <!-- 预留链接 -->
+        <a href="#">联系方式</a> <!-- 预留链接 -->
+    </nav>
+    
+    <!-- 个人信息卡片 -->
+    <div class="profile-card">
+        <!-- 头像 - 可编辑 -->
+        <img src="C:\Users\隋宇博\Desktop\不变猫头.jpg" alt="头像" class="avatar">
+        
+        <!-- 姓名 - 可编辑 -->
+        <h1 class="name">S.Y.B</h1>
+        
+        <!-- 邮箱 - 可编辑 -->
+        <p class="email">purkniv.frank@gmail.com</p>
+        
+        <div class="edit-tip">
+            Your body betrays your degeneracy.
+        </div>
+    </div>
+    
+    <!-- 右侧三栏内容 -->
+    <div class="right-content">
+        <!-- 第一栏：图书与档案馆 -->
+        <div class="column">
+            <h2 class="column-title">图书与档案馆</h2>
+            <div class="column-content">
+                <p>这里可以放置关于图书与档案馆的内容</p>
+                <p>您可以添加书籍列表、档案资料等信息</p>
+            </div>
+        </div>
+        
+        <!-- 第二栏：汇编与注释 -->
+        <div class="column">
+            <h2 class="column-title">汇编与注释</h2>
+            <div class="column-content">
+                <p>这里可以放置汇编与注释相关的内容</p>
+                <p>您可以添加文章汇编、注释说明等</p>
+            </div>
+        </div>
+        
+        <!-- 第三栏：新东西 -->
+        <div class="column">
+            <h2 class="column-title">新东西</h2>
+            <div class="column-content">
+                <p>这里可以放置最新的内容</p>
+                <p>您可以添加新项目、新想法等</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
